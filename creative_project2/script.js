@@ -35,21 +35,23 @@ $(document).ready(function() {
             data: JSON.stringify(dataToSend),
         })
         .done(function(json) {
-            alert("success");
             console.log(json);
 				var results = "";
 				results += '<h2>Sentiment scores: ' + " </h2>";
 				for (var i=0; i<json.documents.length; i++) {
 				    results += "<p>" + json.documents[i].score + "</p>";
 				}
-				results += '<h2>Sentiment errors: ' + " </h2>";
 				for (var i=0; i<json.errors.length; i++) {
+					if (!(jQuery.isEmptyObject(json.errors[0].id))) {
+						results += '<h2>Sentiment errors: ' + " </h2>";
+					}
 				    results += "<p>" + json.errors[i].id + ": " + json.errors[i].message + "</p>"
 				}
 				$("#cognitiveResults").html(results);
         })
         .fail(function() {
-            alert("error");
+            var results = "<h2>Failed to query Microsoft Cognitive Services API. Please try again later.</h2>";
+            $("#cognitiveResults").html(results);
         });
     });
 });
