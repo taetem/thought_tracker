@@ -21,6 +21,11 @@ body {
     grid-gap: 20px;
 }
 
+img.largeimg {
+  max-width:50%;
+  max-height:50%;
+}
+
 div {
     color: #333;
     width: 100%;
