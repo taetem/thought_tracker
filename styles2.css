@@ -21,9 +21,10 @@ body {
     grid-gap: 20px;
 }
 
-.largeimg img {
-  max-width:30%;
-  max-height:30%;
+img {
+    max-width: 100%;
+    height: auto;
+    width: auto\9; /* ie8 */
 }
 
 div {
