@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Thought Tracker</title>
+    <title>Login</title>
     <!--<link rel="stylesheet" href="/styles.css">-->
     <link rel="stylesheet" href="styles2.css">
     <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
@@ -14,16 +14,16 @@
     <label for="show-menu" class="show-menu">Show Menu</label>
     <input type="checkbox" id="show-menu" role="button">
         <ul id="menu">
-          <li><a class="active" href="#">Home</a></li>
-           <li>
-            <a href="#">Get Started <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+          <li><a href="index.html">Home</a></li>
+            <li>
+            <a class="active" href="#">Get Started <i class="fa fa-angle-down" aria-hidden="true"></i></a>
             <ul class="hidden">
-              <li><a href="login.html">Login</a></li>
-              <li><a href="journalanon.html">Journal Anonymously</a></li>
+              <li><a class="active" href="#">Login</a></li>
+              <li><a href="#">Journal Anonymously</a></li>
             </ul>
           </li>
           <li>
-            <a href=#>About <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+            <a href="#">About <i class="fa fa-angle-down" aria-hidden="true"></i></a>
             <ul class="hidden">
               <li><a href="about_thoughttracking.html">What is Thought Tracker?</a></li>
               <li><a href="#">What We Do</a></li>
@@ -34,7 +34,7 @@
           <li><a href="#">Contact</a></li>
     </ul>   
       </div>
-      <div class="sidebar">
+            <div class="sidebar">
     <h1>Sidebar</h1>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing
     elit. Donec quis dui vitae elit ornare convallis. Lorem ipsum
@@ -49,12 +49,14 @@
 
       </div>
       <div class="main">
-    <h1>Welcome</h1>
-    <p>Thought Tracker is a service provided for YOU.</p>
-
-    <p>Write your thoughts, analyze your mood, and be happy!</p>
-
-    <img src="blankpage.jfif" />
+    <h1>Login</h1>
+	  <form>
+	  Email Address:<br>
+	  <input type="text" name="Email Address"><br> 
+	  <br>
+	  Password:<br>
+	  <input type="text" name="password">
+	</form>
       </div>
       <div class="footer">
     <p>Github: https://github.com/taetem/thought_tracker </p>

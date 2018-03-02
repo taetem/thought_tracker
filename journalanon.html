@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Thought Tracker</title>
+    <title>Journal Anonymously</title>
     <!--<link rel="stylesheet" href="/styles.css">-->
     <link rel="stylesheet" href="styles2.css">
     <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
@@ -14,12 +14,12 @@
     <label for="show-menu" class="show-menu">Show Menu</label>
     <input type="checkbox" id="show-menu" role="button">
         <ul id="menu">
-          <li><a class="active" href="#">Home</a></li>
+          <li><a href="index.html">Home</a></li>
            <li>
-            <a href="#">Get Started <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+            <a class= "active" href="#">Get Started <i class="fa fa-angle-down" aria-hidden="true"></i></a>
             <ul class="hidden">
               <li><a href="login.html">Login</a></li>
-              <li><a href="journalanon.html">Journal Anonymously</a></li>
+              <li><a class="active" href="#">Journal Anonymously</a></li>
             </ul>
           </li>
           <li>
@@ -48,16 +48,23 @@
     eget. </p>
 
       </div>
-      <div class="main">
-    <h1>Welcome</h1>
-    <p>Thought Tracker is a service provided for YOU.</p>
+      <div class="main", id="cognitive">
+    <h1>Journal Anonymously and Track Your Mood!</h1>
+    <form>
+      <label>Write a thought!</label>
+      <input id="cognitiveInput" type="text"></input><br/>
+      <input id="cognitiveSubmit" type="submit" value="Submit"></input>
+    </form>
 
-    <p>Write your thoughts, analyze your mood, and be happy!</p>
-
-    <img src="blankpage.jfif" />
+    <div id="cognitiveResults"></div>
       </div>
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script text="type/javascript" src="script.js">
+      </script>
+
       <div class="footer">
-    <p>Github: https://github.com/taetem/thought_tracker </p>
+    	<p>Github: https://github.com/taetem/thought_tracker </p>
       </div>
     </div>
 
