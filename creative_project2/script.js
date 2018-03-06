@@ -39,7 +39,16 @@ $(document).ready(function() {
 				var results = "";
 				results += '<h2>Sentiment scores: ' + " </h2>";
 				for (var i=0; i<json.documents.length; i++) {
-				    results += "<p>" + json.documents[i].score + "</p>";
+					var sentimentScore = json.documents[i].score
+				    results += "<p>" + sentimentScore + "</p>";
+
+				    if (sentimentScore > 0.5) {
+				    	results += "<p> Your thought is positive. </p>"
+				    } else if (sentimentScore === 0.5) {
+				    	results += "<p> Your thought is neutral. </p>"
+				    } else {
+				    	results += "<p> Your thought is negative. </p>"
+				    }
 				}
 				for (var i=0; i<json.errors.length; i++) {
 					if (!(jQuery.isEmptyObject(json.errors[0].id))) {
